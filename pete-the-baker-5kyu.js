@@ -12,3 +12,8 @@ function cakes(recipe, available) {
 }
 return ans
 }
+
+//Second solution
+function cakes2(recipe,available){
+  return Math.min(...Object.keys(recipe).map(key => Math.floor(available[key]/recipe[key] || 0)))
+} 
